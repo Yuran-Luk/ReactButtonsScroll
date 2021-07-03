@@ -1,0 +1,37 @@
+{
+  "name": "reactbuttonsscroll",
+  "version": "1.0.0",
+  "description": "servise+ test",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuran-Luk/ReactButtonsScroll.git"
+  },
+  "author": "Yuriy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yuran-Luk/ReactButtonsScroll/issues"
+  },
+  "homepage": "https://github.com/Yuran-Luk/ReactButtonsScroll#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0"
+  }
+}
