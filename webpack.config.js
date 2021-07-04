@@ -1,6 +1,8 @@
 const path = require('path')
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin') 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -27,8 +29,12 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html',
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
         }),
     ],
     module: {
@@ -47,7 +53,25 @@ module.exports = {
                         }
                     },
                 ]
-            }
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            esModule: true,
+                        },
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: isDev,
+                        }
+                    },
+                    'sass-loader'
+                ]
+            },
         ]
     }
 }

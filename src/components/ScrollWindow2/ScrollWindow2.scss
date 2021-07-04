@@ -1,0 +1,19 @@
+.scroll {
+    width: 100%;
+
+    .items-container {
+        height: 80vh;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        background: whitesmoke;
+        margin-bottom: 16px;
+        
+        .item {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+        }
+    }
+}
